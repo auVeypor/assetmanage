@@ -1,0 +1,90 @@
+uuid: 4dd06e24-4b0f-40d3-baf9-61baf31bf4d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.asset.asset.field_associated_assets
+    - field.field.asset.asset.field_associated_users
+    - field.field.asset.asset.field_desc
+    - field.field.asset.asset.field_expiry
+    - field.field.asset.asset.field_name
+    - field.field.asset.asset.field_type
+    - field.field.asset.asset.field_value
+  module:
+    - assetmanage
+    - datetime
+    - text
+id: asset.asset.default
+targetEntityType: asset
+bundle: asset
+mode: default
+content:
+  field_associated_assets:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_associated_users:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_desc:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+  field_expiry:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_type:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_value:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  langcode:
+    type: language_select
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

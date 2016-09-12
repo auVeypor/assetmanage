@@ -1,0 +1,24 @@
+uuid: 1046ffaa-04e9-4cd4-b73e-6d79826f2e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.asset.field_value
+  module:
+    - assetmanage
+id: asset.asset.field_value
+field_name: field_value
+entity_type: asset
+bundle: asset
+label: Value
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal
