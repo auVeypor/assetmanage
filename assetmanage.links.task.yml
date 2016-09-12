@@ -1,0 +1,21 @@
+# Asset routing definition
+asset.settings_tab:
+  route_name: asset.settings
+  title: 'Settings'
+  base_route: asset.settings
+entity.asset.canonical:
+  route_name: entity.asset.canonical
+  base_route: entity.asset.canonical
+  title: 'View'
+
+entity.asset.edit_form:
+  route_name: entity.asset.edit_form
+  base_route: entity.asset.canonical
+  title: Edit
+
+entity.asset.delete_form:
+  route_name:  entity.asset.delete_form
+  base_route:  entity.asset.canonical
+  title: Delete
+  weight: 10
+
