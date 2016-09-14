@@ -5,6 +5,8 @@ dependencies:
   module:
     - assetmanage
     - user
+_core:
+  default_config_hash: yNGnOjg2YRTWGVK92W8gWO6e9y6qDAJQI4Pm5jFUlTg
 id: asset.field_associated_users
 field_name: field_associated_users
 entity_type: asset

@@ -7,12 +7,14 @@ dependencies:
   module:
     - assetmanage
     - datetime
+_core:
+  default_config_hash: etVFWs-T6cdTNACxI8AiG8AQxdjkiFNolSH8mRHcp9g
 id: asset.asset.field_expiry
 field_name: field_expiry
 entity_type: asset
 bundle: asset
 label: Expiry
-description: ''
+description: 'Optional. Not all assets have expiry dates.'
 required: false
 translatable: false
 default_value: {  }

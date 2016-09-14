@@ -1,18 +1,15 @@
-uuid: 0b066363-7d38-4b95-9322-b3d262770c9f
+uuid: 2f92f6a6-83d1-4ef7-9a9f-981b034cddf6
 langcode: en
 status: true
 dependencies:
   module:
     - assetmanage
-_core:
-  default_config_hash: BMl6ZkItG_IVg77W8A4RfgmVLlekodlQAudqA2OJBY4
-id: asset.field_value
-field_name: field_value
+id: asset.field_description
+field_name: field_description
 entity_type: asset
-type: decimal
+type: string_long
 settings:
-  precision: 10
-  scale: 2
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

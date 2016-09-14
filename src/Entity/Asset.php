@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\assetmanage\AssetInterface;
 use Drupal\user\UserInterface;
+use Drupal\user\Entity\User;
 
 /**
  * Defines the Asset entity.
@@ -46,8 +47,8 @@ use Drupal\user\UserInterface;
  *   },
  *   links = {
  *     "canonical" = "/admin/structure/asset/{asset}",
- *     "add-form" = "/admin/structure/asset/add",
- *     "edit-form" = "/admin/structure/asset/{asset}/edit",
+ *     "add-form" = "/asset/add",
+ *     "edit-form" = "/asset/{asset}/edit",
  *     "delete-form" = "/admin/structure/asset/{asset}/delete",
  *     "collection" = "/admin/structure/asset",
  *   },
@@ -223,6 +224,14 @@ class Asset extends ContentEntityBase implements AssetInterface {
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    // $currentuid = \Drupal::currentUser()->id();
+    // $currentUser = User::load($currentuid);
+
+    //if($user->hasRole('administrator')) {
+
+   // }
+
 
     return $fields;
   }

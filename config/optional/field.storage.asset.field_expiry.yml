@@ -5,6 +5,8 @@ dependencies:
   module:
     - assetmanage
     - datetime
+_core:
+  default_config_hash: n9ZEYm1k-1sAt5tMMpv08c4pEObbuIE0SzoXOYyh5KE
 id: asset.field_expiry
 field_name: field_expiry
 entity_type: asset

@@ -6,6 +6,8 @@ dependencies:
     - field.storage.asset.field_type
   module:
     - assetmanage
+_core:
+  default_config_hash: vE9H23W8kRCOA1mLnWkRAP5YufP9GB1ltE9CdWF1k5g
 id: asset.asset.field_type
 field_name: field_type
 entity_type: asset

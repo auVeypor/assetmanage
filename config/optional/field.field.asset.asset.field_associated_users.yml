@@ -6,6 +6,8 @@ dependencies:
     - field.storage.asset.field_associated_users
   module:
     - assetmanage
+_core:
+  default_config_hash: 7CVZESwjZLhI4bnFn-2BeH5Q07BxBJhT4KI_waHiQFY
 id: asset.asset.field_associated_users
 field_name: field_associated_users
 entity_type: asset

@@ -5,16 +5,16 @@ dependencies:
   config:
     - field.field.asset.asset.field_associated_assets
     - field.field.asset.asset.field_associated_users
-    - field.field.asset.asset.field_desc
+    - field.field.asset.asset.field_description
     - field.field.asset.asset.field_expiry
-    - field.field.asset.asset.field_name
     - field.field.asset.asset.field_type
     - field.field.asset.asset.field_value
   module:
     - assetmanage
     - datetime
-    - text
     - user
+_core:
+  default_config_hash: rBP1rKmZ8n06DlOKIzpHv6_2YFgkXYiFZsgOHlc4pVE
 id: asset.asset.default
 targetEntityType: asset
 bundle: asset
@@ -22,49 +22,42 @@ mode: default
 content:
   field_associated_assets:
     weight: 7
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_associated_users:
     weight: 6
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-  field_desc:
-    weight: 3
-    label: above
+  field_description:
+    weight: 8
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
   field_expiry:
     weight: 5
-    label: above
+    label: inline
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
-  field_name:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_type:
     weight: 2
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_value:
     weight: 4
-    label: above
+    label: inline
     settings:
       thousand_separator: ''
       decimal_separator: .
@@ -73,7 +66,7 @@ content:
     third_party_settings: {  }
     type: number_decimal
   name:
-    label: above
+    label: inline
     type: string
     weight: -4
     settings:
