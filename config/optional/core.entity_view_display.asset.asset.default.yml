@@ -7,14 +7,20 @@ dependencies:
     - field.field.asset.asset.field_associated_users
     - field.field.asset.asset.field_description
     - field.field.asset.asset.field_expiry
+    - field.field.asset.asset.field_name
+    - field.field.asset.asset.field_ownassociated
+    - field.field.asset.asset.field_ownevents
+    - field.field.asset.asset.field_ownusers
+    - field.field.asset.asset.field_ownview
     - field.field.asset.asset.field_type
     - field.field.asset.asset.field_value
   module:
     - assetmanage
     - datetime
+    - link
     - user
 _core:
-  default_config_hash: rBP1rKmZ8n06DlOKIzpHv6_2YFgkXYiFZsgOHlc4pVE
+  default_config_hash: '-qFX1Zzn2KGITmEqoc2eIfMmY8kdOY_8KD_Npj9nulQ'
 id: asset.asset.default
 targetEntityType: asset
 bundle: asset
@@ -48,6 +54,50 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+  field_ownassociated:
+    weight: 13
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_ownevents:
+    weight: 12
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_ownusers:
+    weight: 14
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_ownview:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
   field_type:
     weight: 2
     label: inline
@@ -78,4 +128,5 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_name: true

@@ -7,7 +7,7 @@ dependencies:
   module:
     - assetmanage
 _core:
-  default_config_hash: 6qGcCFJK1OAZ7HrLkKmbaMUPvLl6Wtjo9Rs5vLHKMP4
+  default_config_hash: _gsuy_hcdhC0SyqfdRz5oOwZI5-fkNU1xH9Fczxtngc
 id: asset.asset.field_value
 field_name: field_value
 entity_type: asset

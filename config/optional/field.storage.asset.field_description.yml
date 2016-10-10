@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - assetmanage
+_core:
+  default_config_hash: zMa2GMAM-SVvQblx6V3z1xSdKKwfFh5u0fr-KBHabgE
 id: asset.field_description
 field_name: field_description
 entity_type: asset

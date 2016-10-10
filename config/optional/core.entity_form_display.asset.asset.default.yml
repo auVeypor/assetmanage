@@ -7,26 +7,31 @@ dependencies:
     - field.field.asset.asset.field_associated_users
     - field.field.asset.asset.field_description
     - field.field.asset.asset.field_expiry
+    - field.field.asset.asset.field_name
+    - field.field.asset.asset.field_ownassociated
+    - field.field.asset.asset.field_ownevents
+    - field.field.asset.asset.field_ownusers
+    - field.field.asset.asset.field_ownview
     - field.field.asset.asset.field_type
     - field.field.asset.asset.field_value
   module:
     - assetmanage
     - datetime
 _core:
-  default_config_hash: FfVhZhH-BN_CVHSa4TJI_vo9R5tFIQQbzZNBh0-Sf2M
+  default_config_hash: InhxmHXF44dNfinv3X7Mw_MRSnPbyFCRRgFP-yT4TXg
 id: asset.asset.default
 targetEntityType: asset
 bundle: asset
 mode: default
 content:
   field_associated_assets:
+    type: entity_reference_autocomplete
     weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
   field_associated_users:
     weight: 5
     settings:
@@ -68,5 +73,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_name: true
+  field_ownassociated: true
+  field_ownevents: true
+  field_ownusers: true
+  field_ownview: true
   langcode: true
   user_id: true

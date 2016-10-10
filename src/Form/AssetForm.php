@@ -13,6 +13,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\assetmanage\AssetInterface;
 use Drupal\user\UserInterface;
 use Drupal\user\Entity\User;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 
 /**
@@ -64,6 +65,8 @@ class AssetForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function save(array $form, FormStateInterface $form_state) {
+    global $base_url;
+
     $entity = $this->entity;
     $status = parent::save($form, $form_state);
 
@@ -72,6 +75,19 @@ class AssetForm extends ContentEntityForm {
         drupal_set_message($this->t('Created the %label Asset.', [
           '%label' => $entity->label(),
         ]));
+
+        // Sets the own link field to a link to its view
+        $entity->field_ownview = $base_url . "/asset/" . $entity->id() . "/view";
+        $entity->field_ownview->title = "View Asset";
+
+        $entity->field_ownevents = $base_url . "/asset/" . $entity->id() . "/eventlist";
+        $entity->field_ownevents->title = "View Subscribed Events";
+
+        $entity->field_ownassociated = $base_url . "/asset/" . $entity->id() . "/associated";
+        $entity->field_ownassociated->title = "View Associated Assets";
+
+        $entity->field_ownusers = $base_url . "/asset/" . $entity->id() . "/users";
+        $entity->field_ownusers->title = "View Associated Users";
 
         $entity->setPublished(false);
         \Drupal::logger('barp')->info($entity->isPublished());
@@ -86,7 +102,12 @@ class AssetForm extends ContentEntityForm {
         $entity->save();
         
     }
-    $form_state->setRedirect('entity.asset.canonical', ['asset' => $entity->id()]);
+
+    $url = $base_url . "/asset/" . $entity->id() . "/view/";
+
+    $response = new RedirectResponse($url);
+    $response->send();
+    // $form_state->setRedirect('entity.asset.canonical', ['asset' => $entity->id()]);
   }
 
 }
